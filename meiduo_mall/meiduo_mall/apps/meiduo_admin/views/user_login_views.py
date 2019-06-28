@@ -9,6 +9,7 @@ from rest_framework.response import Response
 
 
 class UserLoginView(APIView):
+    """后台登录"""
     def post(self, request):
         # 1、身份认证，签发token
         serializer = UserLoginSerializer(data=request.data)

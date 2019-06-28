@@ -165,8 +165,8 @@ USE_I18N = True
 
 USE_L10N = True
 
-# USE_TZ = True   数据库时间
-USE_TZ = False
+# USE_TZ = True   数据库本地时间
+USE_TZ = True
 
 
 # Static files (CSS, JavaScript, Images)
@@ -373,3 +373,7 @@ JWT_AUTH = {
     'JWT_EXPIRATION_DELTA': timedelta(days=1), # 有效期为1天
     'JWT_RESPONSE_PAYLOAD_HANDLER': 'meiduo_admin.jwt_reponses.jwt_response_handler.custom_jwt_response_handler',
 }
+
+
+# 品牌管理图片上传
+FDFS_CONFIG_PATH = os.path.join(BASE_DIR,'utils/fastdfs/client.conf')
